@@ -129,7 +129,7 @@
             <div class="drupal-messages"><div class="container"><?php print $messages; ?></div></div>
           <?php endif; ?>
 
-          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+           <?php if ($tabs && !user_is_anonymous()): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
 
           <?php print render($page['help']); ?>
 
